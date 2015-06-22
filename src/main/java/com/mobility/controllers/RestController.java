@@ -84,10 +84,10 @@ public class RestController {
 		List<Board> allBoards = repo.pagebyPage(p,s);
 		multipleBoardResponse extResp=null;
 		if(allBoards.size()==s){
-		 extResp = new multipleBoardResponse(p,true,true, allBoards);
+		 extResp = new multipleBoardResponse(allBoards.size(),p,true,true, allBoards);
 		}else
 		{
-		 extResp = new multipleBoardResponse(p,false,true, allBoards);
+		 extResp = new multipleBoardResponse(allBoards.size(),p,false,true, allBoards);
 		}
 		
 		return extResp;
@@ -100,7 +100,7 @@ public class RestController {
 
 		List<Board> allBoards = repo.pagebyPage(9999,9999);
 		multipleBoardResponse extResp=null;
-		 extResp = new multipleBoardResponse(allBoards.size(),true,true, allBoards);
+		 extResp = new multipleBoardResponse(allBoards.size(),1,true,true, allBoards);
 		
 		return extResp;
 	}
@@ -124,10 +124,10 @@ public class RestController {
 		List<Board> allBoards = repo.pagebyPage(p,s);
 		multipleBoardResponse extResp=null;
 		if(allBoards.size()==s){
-		 extResp = new multipleBoardResponse(p,true,true, allBoards);
+		 extResp = new multipleBoardResponse(allBoards.size(),p,true,true, allBoards);
 		}else
 		{
-		 extResp = new multipleBoardResponse(p,false,true, allBoards);
+		 extResp = new multipleBoardResponse(allBoards.size(),p,false,true, allBoards);
 		}
 		
 		return extResp;
